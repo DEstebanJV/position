@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento con css</title>
+    <style>
+
+     body{ 
+      font-family:'Times New Roman', Times, serif;
+      margin: 0; 
+      padding: 0;
+      padding-bottom: 200em;
+      }
+      section{
+
+          border: 2px dashed steelblue;
+          padding: 2em;
+          margin: 5em auto;   
+          width: 400px;
+          height: 300px;
+          position: relative;  /* Para absolute se necesita una referencia anterior */ 
+      }
+      div {
+          border-radius: 5px;
+          color: #444;
+          font-size: 2.8em;
+          font-weight: bold;
+          line-height: 1.5;
+          padding: .5em;  
+          text-align: center;
+          background: rgba(173, 216, 230, .7)  
+      }
+      /* POSICIONAMIENTO CON RELATIVE */
+      /* .uno {
+        position: relative;          /* Recuerda su posicion inicial y se guarda ese espacio, se mueve con top bottom rigth left
+        top: 50%;
+        transform: translateY(-50%); /* ubicamos al obejto en todo el centro de la caja donde le habiamos asignado segun el valor del padre  
+      } */
+
+      /* POSICIONMAINETO CON ABSOLUTE */
+    .uno 
+    {
+        position: absolute; /* Su ancho esta definido por su contenido*/ /* se posiciona segun al ancestro con position mas cercana si no hay ninguna se posiciona segun el body */
+        top: 0px;   
+        left: 0px;
+
+    }
+
+    /* POSICIONAMIENTO CON FIXED */
+    /* .uno { */
+
+       /*  position: fixed; } */ /* La posicion siempre depende del navegador */  /* Se mueve con la pagina */
+
+ 
+
+    </style>
+</head>
+<body>
+    
+    <section>
+           <!--  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+             est cum nobis reprehenderit,
+             voluptatibus dolor, ut officiis laborum veritatis, velit suscipit?
+             Doloribus alias at rerum nisi enim quos libero error?   </p> -->
+            <div class="uno"> 1 </div>
+           <!--  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+                est cum nobis reprehenderit,
+                voluptatibus dolor, ut officiis laborum veritatis, velit suscipit?
+                Doloribus alias at rerum nisi enim quos libero error?   </p> --> 
+    </section>
+
+</body>
+</html>
